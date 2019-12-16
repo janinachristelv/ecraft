@@ -10,28 +10,9 @@
   
 </head>
 <body>
-
-  <script>
-    var url = "https://janinachristelv.github.io/ecraft/meetings.json";
-    $(document).ready(function(){
-      $.ajax({
-        url: url,
-        dataType: 'json',
-        error: function(){
-          console.log('JSON FAILED for data');
-        },
-        success:function(results){
-          var current = document.getElementById("current");
-          results.forEach(function(element) {
-            current.insertAdjacentHTML( 'beforeend',"Subject[0]");
-          }); // end of forEach
-        }  // end of success fn
-      }) // end of Ajax call
-    }) // end of $(document).ready() function
-  </script>
   
   <div id="ulcca">
-    <div class="yksi"><span class="current"></span></div>
+    <div class="yksi"><p class="current"></p></div>
     <div class="kaksi"> hoiccuhoi </div>
   </div>
 
