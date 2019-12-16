@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-<title>eCraft</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <title>eCraft</title>
+  
 </head>
 <body>
 
   <script>
-    var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var myObj = JSON.parse(this.responseText);
-    document.getElementById("current").innerHTML = myObj.Subject;
-  }
-};
-xmlhttp.open("GET", "meetings.json", true);
-xmlhttp.send();
+    var url = "https://janinachristelv.github.io/ecraft/meetings.json";
+    $(document).ready(function(){
+      $.ajax({
+        url: url,
+        dataType: 'json',
+        error: function(){
+          console.log('JSON FAILED for data');
+        },
+        success:function(results){
+          var current = document.getElementById("current");
+          results.forEach(function(element) {
+            current.insertAdjacentHTML( 'beforeend',"Subject[0]");
+          }); // end of forEach
+        }  // end of success fn
+      }) // end of Ajax call
+    }) // end of $(document).ready() function
   </script>
   
   <div id="ulcca">
