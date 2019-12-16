@@ -23,4 +23,5 @@ body {
 
 .kaksi {
   background: #fff;
+  grid-column: 2 / 3;
 }
