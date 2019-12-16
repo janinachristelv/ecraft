@@ -7,8 +7,20 @@
 </head>
 <body>
 
+  <script>
+    var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    document.getElementById("current").innerHTML = myObj.Subject;
+  }
+};
+xmlhttp.open("GET", "meetings.json", true);
+xmlhttp.send();
+  </script>
+  
   <div id="ulcca">
-    <div class="yksi"> moiccumoi </div>
+    <div class="yksi"><span class="current"></span></div>
     <div class="kaksi"> hoiccuhoi </div>
   </div>
 
