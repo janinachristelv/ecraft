@@ -14,16 +14,12 @@ body {
   right:0;
 }
 
-#ulcca > * {
-  flex: 1 100%;
-}
-
 .yksi {
   background: url("bg-image.jpg") no-repeat center;
   background-size: cover;
   text-align:center;
   font-color:#fff;
-  flex: 2 0px;
+  width:66,7%;
 }
 
 .kaksi {
