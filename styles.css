@@ -19,9 +19,9 @@ body {
   background-size: cover;
   text-align:center;
   font-color:#fff;
+  grid-column: 1 / span 2;
 }
 
 .kaksi {
   background: #fff;
-  grid-column: 2 / 3;
 }
