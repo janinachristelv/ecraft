@@ -19,7 +19,7 @@ body {
   background-size: cover;
   text-align:center;
   font-color:#fff;
-  width:66,7%;
+  min-width:66,7%;
 }
 
 .kaksi {
