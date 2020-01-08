@@ -1,4 +1,6 @@
-@yellow: #fc0;
+:root {
+    --yellow: #fc0;
+}
 
 body {
   font: 1em Lato, sans-serif;
@@ -16,13 +18,207 @@ body {
 }
 
 .yksi {
-  background: url("bg-image.jpg") no-repeat center;
+  background: url("bg-image.jpg") no-repeat top left;
   background-size: cover;
   text-align:center;
   color:#fff;
   grid-column: 1 / span 2;
+  display:flex;
+  flex-flow:column nowrap;
+  justify-content:space-between;
+}
+
+.yksi > .one {
+    font-weight:300;
+    line-height:115%;
+    margin:auto;
+    padding:0 20%;
+}
+
+.yksi > .one > div {
+    margin:15px 0;
+}
+
+.yksi > .one > .heading {
+    font-size:1.2em;
+}
+
+.yksi > .one > .title {
+    font-weight:900;
+    font-size:2em;
+    line-height:145%;
+}
+
+.yksi > .one > .time > .bar {
+    display:inline-block;
+    width:225px;
+    height:5px;
+    background:rgba(255,255,255,0.15);
+    border-radius:150px;
+    padding:0;
+    margin:3px 10px;
+}
+
+.yksi > .one > .time > .bar > .progress {
+    display:block;
+    width:25%;
+    height:5px;
+    background: var(--yellow);
+    border-radius:150px;
+    padding:0;
+    margin:0;
+}
+
+.yksi > .one > .line {
+    width:30px;
+    border-bottom:1px solid #fff;
+    height:0;
+    margin:0px auto;
+}
+
+.yksi > .two {
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-evenly;
+    background:rgba(255,255,255,0.03);
+    border-top:1px solid rgba(255,255,255,0.03);
+    box-shadow: 0 0 100px rgba(0,0,0,0.15);
+    padding:40px 25px;
+}
+
+.yksi > .two > div {
+    font-weight:300;
+    font-size:0.7em;
+    margin:auto 0;
+    padding:0;
+    text-align:left;
+    width:25%;
+    line-height:75%;
+}
+
+.yksi > .two > div > .title {
+    text-transform:none;
+    font-size:1.15em;
+    font-weight:900;
+    line-height:145%;
 }
 
 .kaksi {
   background: #fff;
+  overflow:hidden;
+  display:grid;
+  grid-template-rows:75px 1fr;
+  padding:5px 25px;
+  grid-area: 1 / 3 / span 1 / span 1;
+}
+
+.kaksi > .one {
+    box-shadow:0 0 75px 75px white;
+    z-index:2;
+    margin:auto 0;
+}
+
+.kaksi > .one > p {
+    margin:3.5px 0;
+}
+
+.kaksi > .one > .title {
+    color:grey;
+    font-weight:300;
+    font-size:0.9em;
+}
+
+.kaksi > .one > .name {
+    font-weight:900;
+    font-size:1.1em;
+}
+
+.kaksi > .two {
+    overflow-y:auto;
+    z-index:1;
+    padding:50px 0 0;
+}
+
+.kolme {
+    background: #fff;
+    overflow:hidden;
+    padding:0;
+    display:table;
+    grid-area: 1 / 3 / span 1 / span 1;
+    height:100%;
+    z-index:3;
+}
+
+.kolme > div {
+    padding:20px 30px;
+    margin:0;
+    font-weight:700;
+    vertical-align:middle;
+    min-height:25px;
+}
+
+.kolme > .title {
+    background-color: var(--yellow);
+    text-transform:none;
+}
+
+.kolme > .title > i {
+    color:#fff;
+    margin-right:10px;
+}
+
+.kolme > .child {
+    border-bottom:1px solid rgba(0,0,0,0.05);
+    background-color: #fff;
+}
+
+.kolme > .grand {
+    padding:10px 30px;
+}
+
+.kolme > .grand > .child {
+    padding-left:40px;
+    height:50px;
+    display:block;
+    font-size:0.9em;
+    margin-bottom:5px;
+}
+
+.subtitle {
+    font-size:0.8em;
+    color:grey;
+}
+
+.noimg {
+    background-color:rgba(0,0,0,0.1);
+    width:40px;
+    height:40px;
+    border-radius:100%;
+    float:left;
+    margin-right:10px;
+}
+
+.kolme > .child > img {
+    width:25px;
+    float:left;
+    margin-right:10px;
+}
+
+.kolme > .child > i {
+    float:right;
+}
+
+.kolme > div:last-child {
+    border-bottom:0;
+    padding-left:70px;
+    text-transform:none;
+    font-weight:300;
+    font-size:0.9em;
+}
+
+.piilossa {
+    display:none;
+}
+.piilossa2 {
+    translateX(100%);
 }
